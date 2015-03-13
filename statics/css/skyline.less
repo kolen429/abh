@@ -1,0 +1,172 @@
+@charset "utf-8";
+*{
+  font-family: "微软雅黑";
+  font-size: 16px;
+}
+/*背景图层*/
+.sl-wrap{
+  position: relative;
+  .sl-box{
+    width: 100%;
+    position: absolute;
+    .sl-item{
+      width: 100%;
+      position: fixed;
+//      height: 1000px;
+      z-index: 1;
+      .sl-bg{
+        position: absolute;
+        width: 100%;
+      }
+      .sl-bg-con{
+        position: absolute;
+        font-size: 50px;
+        color: orange;
+        top: 50%;
+        left: 50%;
+      }
+    }
+    >.ac{
+      z-index: 8888!important;
+            display: block;
+
+    }
+
+  }
+  ul{
+    list-style: none;
+    position: absolute;
+    z-index: 9999;
+    top:400px;
+    li{
+      height: 12px;
+      width: 12px;
+      border-radius: 12px;
+      border: 1px solid orange;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+    >.ac{
+      background: orange;
+    }
+
+  }
+}/*背景图层结束*/
+//背景层动画
+@-webkit-keyframes intos{
+  from{
+//    -webkit-transform: translateY(100%);
+    opacity: 0.1;
+
+  }
+  to{
+//    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+//背景层动画
+@-webkit-keyframes outs{
+  from{
+//    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+  to{
+//    -webkit-transform: translateY(-100%);
+    opacity: 0.1;
+  }
+}
+
+
+
+.sl-con{
+  position: fixed;
+  z-index: 9998;
+  right: 1%;
+  top:80%;
+  text-align: center;
+  img{
+    vertical-align: middle;
+  }
+  a{
+    color: #ffffff;
+    font-size: 24px;
+    display: inline-block !important;
+    margin-right: 90px;
+  }
+  a:hover{
+    color: orange;
+    text-decoration: none;
+  }
+  p{
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  :last-child p{
+    margin-left: -30px;
+  }
+
+}
+.sl-log{
+  position: absolute;
+  z-index: 9998;
+  top: 5%;
+  right: 5%;
+  a{
+    color: #ffffff;
+    font-size: 16px;
+    margin-right: 30px;
+
+  }
+}
+.sl-logo{
+  position: absolute;
+  z-index: 9998;
+  top:5%;
+  left: 5%;
+
+}
+.sl-partner{
+  position: absolute;
+  z-index: 9998;
+  top: 85%;
+  left: 5%;
+  color: orange;
+  font-size: 30px;
+}
+.sl-modal{
+  z-index: 9999;
+}
+#myModalLabel{
+  text-align: center;
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 229px;
+    top:40px;
+    left: 434px;
+    background: linear-gradient(#e6e6e6,#e6e6e6,#e6e6e6);
+  }
+  &:before{
+    content: "或者";
+    position: absolute;
+    top:60px;
+  }
+}
+
+.myModalLabel{
+  padding-top: 7px;
+  padding-left: 40px;
+  strong{
+    color: orange;
+  }
+}
+.form-control:focus{
+  border: 1px solid orange;
+}
+#eId{
+  display: block;
+  text-align: center;
+}
